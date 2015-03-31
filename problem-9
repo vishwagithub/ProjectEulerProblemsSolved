@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+ int a,b,c,i,j,k,sum=0;
+ int sum1=0,sum2=0,sum3=0;
+ for(k=1;k<10000;k++)
+ {
+  for(j=1;j<10000;j++)
+  {
+   for(i=1;i<10000;i++)
+   {
+     sum1 = k * k;
+     sum2 = j * j;
+     sum3 = i * i;
+     if(sum1==sum2+sum3)
+     {
+       printf("%d  %d   %d\n",k,j,i);
+	if((k+j+i)==1000)
+        { 
+          printf("k == %d   j == %d    i == %d\n",k,j,i);
+          sum = k * j * i; 
+          printf("%d\n",sum);
+          printf("\n");
+          exit(0);
+        }
+     }
+   }
+  }
+ }
+ printf("\n");
+ return 0;
+} 
